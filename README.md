@@ -11,7 +11,21 @@
 - **Easy Navigation**: Built with `react-router-dom` for smooth transitions between pages.
 - **Notifications**: Integrated with `react-toastify` for user alerts.
 
+### Live Site :https://codepilot4.netlify.app/
+
 ---
+## Project Demo
+<img width="1468" alt="Screenshot 2025-03-11 at 10 26 58 PM" src="https://github.com/user-attachments/assets/ab7765c1-0641-4ab8-8387-b090589ef49c" />
+<img width="1464" alt="Screenshot 2025-03-11 at 10 27 20 PM" src="https://github.com/user-attachments/assets/4e3febb1-f8a2-432e-a737-ffeab16b8961" />
+<img width="1452" alt="Screenshot 2025-03-11 at 10 29 14 PM" src="https://github.com/user-attachments/assets/b9329cbc-3269-477f-9906-474cfae8f605" />
+<img width="1455" alt="Screenshot 2025-03-11 at 10 32 40 PM" src="https://github.com/user-attachments/assets/17bf2640-9aeb-4936-bb3d-a3dfb14f2e6d" />
+
+
+
+
+---
+
+
 
 ## Tech Stack
 
@@ -49,6 +63,10 @@ npm install
 ```bash
 npm run dev
 ```
+
+
+
+
 
 
 
