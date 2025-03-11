@@ -62,8 +62,8 @@ const Playground = () => {
       headers: {
         'content-type': 'application/json',
         'Content-Type': 'application/json',
-   'x-rapidapi-key': 'f325ed34f3mshe0e437172d2631bp17f42ajsnd1a20f4552c8',
-		'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
+        'x-rapidapi-key': import.meta.env.VITE_RAPIDAPI_KEY,
+        'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
       },
       data: JSON.stringify({
         language_id: language_id,
@@ -73,7 +73,7 @@ const Playground = () => {
     };
 
     const res = await axios.request(options);
-    return res.data.token
+    return res.data.token;
   }
 
   const getOutput = async (token) => {
@@ -83,8 +83,8 @@ const Playground = () => {
       url: "https://judge0-ce.p.rapidapi.com/submissions/" + token,
       params: { base64_encoded: 'true', fields: '*' },
       headers: {
-  'x-rapidapi-key': 'f325ed34f3mshe0e437172d2631bp17f42ajsnd1a20f4552c8',
-		'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
+        'x-rapidapi-key': import.meta.env.VITE_RAPIDAPI_KEY,
+        'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
       }
     };
 
@@ -122,6 +122,7 @@ const Playground = () => {
     console.log("got output", res);
 
     const status_name = res.status.description;
+    console.log(status_name);
     if(status_name!='Accepted'){
       toast.error(status_name);
       setCurrentOutput("");
