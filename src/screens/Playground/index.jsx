@@ -90,11 +90,13 @@ const Playground = () => {
 
     // call the api
     const res = await axios.request(options);
+    console.log("res", res);
     if (res.data.status_id <= 2) {
       const res2 = await getOutput(token);
+      console.log("res2",res2);
       return res2.data;
     }
-    return res.data;
+    return res;
   }
 
  const runCode = async () => {
@@ -120,6 +122,11 @@ const Playground = () => {
     console.log("got output", res);
 
     const status_name = res.status.description;
+    if(status_name!='Accepted'){
+      toast.error(status_name);
+      setCurrentOutput("");
+      return;
+    }
     const decoded_output = decode(res.stdout ? res.stdout : '');
     const decoded_compile_output = decode(res.compile_output ? res.compile_output : '');
     const decoded_error = decode(res.stderr ? res.stderr : '');
